@@ -7,7 +7,7 @@ body {
     height: 100vh;
     background: linear-gradient(#000000, #ffffff, #f878c7);
     font-family: 'kanit';
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
     opacity: 0; 
-    animation: fadeIn 1s ease forwards;
+    animation: fadeIn 1s ease forwards; 
 }
 
 @keyframes fadeIn {
@@ -30,21 +30,8 @@ h2 {
     text-align: center;
 }
 
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: #222;
-    color: #ffffff;
+p {
+    font-size: 18px;
 }
 
 button {
@@ -60,19 +47,4 @@ button {
 button:hover {
     background-color: #222;
     color: #f878c7;
-}
-
-.login-form img {
-    width: 50px;
-    margin-bottom: 30px;
-}
-
-.input-group i {
-    color: #f878c7;
-}
-
-p a {
-    color: rgb(175, 175, 175);
-    font-size: 12px;
-    text-decoration: none;
 }

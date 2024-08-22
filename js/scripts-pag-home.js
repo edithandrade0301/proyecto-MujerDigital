@@ -1,3 +1,7 @@
+if (localStorage.getItem('isAuthenticated') !== 'true') {
+    // Si no está autenticado, redirigir a index.html
+    window.location.href = 'index.html';
+}
 
 //carousel
 document.addEventListener("DOMContentLoaded", function() {

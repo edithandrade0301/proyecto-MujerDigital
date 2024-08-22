@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(#000000, #ffffff, #f59b33);
+    background: linear-gradient(#000000, #ffffff, #f878c7);
     font-family: 'kanit';
     color: white;
 }
@@ -51,7 +51,7 @@ button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #f59b33;
+    background-color: #f878c7;
     color: #222;
     font-weight: 600;
     cursor: pointer;
@@ -59,7 +59,7 @@ button {
 
 button:hover {
     background-color: #222;
-    color: #f59b33;
+    color: #f878c7;
 }
 
 .login-form img {
@@ -68,7 +68,7 @@ button:hover {
 }
 
 .input-group i {
-    color: #f59b33;
+    color: #f878c7;
 }
 
 p a {
