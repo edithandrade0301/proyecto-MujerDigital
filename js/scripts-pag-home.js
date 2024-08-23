@@ -1,6 +1,10 @@
+
 if (localStorage.getItem('isAuthenticated') !== 'true') {
-    // Si no está autenticado, redirigir a index.html
-    window.location.href = 'index.html';
+window.location.href = 'index.html';
+}
+
+function logout() {
+    localStorage.removeItem('isAuthenticated');
 }
 
 //carousel

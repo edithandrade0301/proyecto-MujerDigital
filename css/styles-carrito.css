@@ -95,6 +95,50 @@ nav.titulo {
     font-size: 18px;
 }
 
+
+/* transiciones del desplegable*/
+.links-container .categorias {
+    color: #f878c7; 
+    font-size: 24px; 
+    transition: color 0.3s ease; 
+}
+
+.links-container .categorias:hover {
+    color: #ffffff; 
+}
+.categorias {
+    cursor: pointer;
+}
+
+.categorias ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    color: #000000;
+}
+
+.categorias:hover ul {
+    display: block;
+    position: absolute;
+    background-color: #838382;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.categorias ul li {
+    padding: 5px 0;
+    font-size: 16px;
+    color: #fff; 
+
+}
+
+.categorias ul li:hover {
+    background-color: #f878c7;
+    color: white;
+}
+
 /* CARRITO */
 .sec-1
 {

@@ -1,25 +1,34 @@
 <?php
-// get-productos.php
-
-header('Content-Type: application/json');
-$servername = "localhost";
+$servername = "localhost"; // o el nombre de tu servidor
 $username = "root";
 $password = "";
 $dbname = "databasecats";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    $stmt = $conn->prepare("SELECT * FROM productos");
-    $stmt->execute();
-
-    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    echo json_encode($products);
-} catch(PDOException $e) {
-    echo "Error: " . $e->getMessage();
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
-$conn = null;
+// Consulta SQL para obtener productos
+$sql = "SELECT nombre, precio, imagen FROM productos"; // Asegúrate de que "productos" sea el nombre de tu tabla
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Salida de datos para cada fila
+    while ($row = $result->fetch_assoc()) {
+        echo "<div class='card'>";
+        echo "<img src='" . $row['imagen'] . "' alt='" . $row['nombre'] . "'>";
+        echo "<p>" . $row['nombre'] . "<br>L." . number_format($row['precio'], 2) . "</p>";
+        echo "<a href='#' class='cart-icon'><i class='fa-solid fa-cart-plus'></i><span class='tooltip'>Agregar al carrito</span></a>";
+        echo "</div>";
+    }
+} else {
+    echo "0 resultados";
+}
+
+$conn->close();
 ?>
