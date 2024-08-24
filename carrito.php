@@ -128,7 +128,7 @@ $conn->close();
             </div>
             <div class="links-container">
                 <a href="home.php"><span class="blanco">HOME</span></a>
-                <a href="Mis-ordenes.html"><span class="blanco">Ver mis ordenes</span></a>
+                <a href="mis-ordenes.php"><span class="blanco">Ver mis ordenes</span></a>
                 <a href="#redes-sociales"><span class="blanco">Redes</span></a>
                 <div class="categorias" id="categorias"><i class="fa-solid fa-user"></i>
                     <ul>
@@ -171,7 +171,7 @@ $conn->close();
             <?php endforeach; ?>
             <div class="total">
                 <span>Total a pagar: L.<?php echo number_format($total_with_tax, 2); ?></span>
-                <form method="post" action="procesar_compra.php">
+                <form method="post" action="tarjeta/index.html">
                     <button type="submit">Procesar compra</button>
                 </form> 
             </div>

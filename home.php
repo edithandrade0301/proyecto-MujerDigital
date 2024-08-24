@@ -31,7 +31,7 @@
 
                 <div class="categorias" id="categorias"><i class="fa-solid fa-user"></i>
                     <ul>
-                        <a href="Mis-ordenes.html"><li>Ver ordenes</li></a>
+                        <a href="mis-ordenes.php"><li>Ver ordenes</li></a>
                         <a href="index.html" onclick="logout()"><li>cerrar sesion</li></a>
                     </ul>  
                 </div>
