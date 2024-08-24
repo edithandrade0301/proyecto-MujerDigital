@@ -35,7 +35,7 @@
                         <a href="index.html" onclick="logout()"><li>cerrar sesion</li></a>
                     </ul>  
                 </div>
-                <a href="carrito.html"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="carrito.php"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
         </nav>
     </header>
@@ -142,7 +142,7 @@
 
 <div class="container-card sec-1" id="guitarras">
     <div class="container-1">
-    <?php
+<?php
 $servername = "localhost"; 
 $username = "root";
 $password = "";
@@ -157,7 +157,7 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL 
-$sql = "SELECT nombre, precio, imagen FROM productos"; // Asegúrate de que "productos" sea el nombre de tu tabla
+$sql = "SELECT id, nombre, precio, imagen FROM productos"; 
 
 $result = $conn->query($sql);
 
@@ -167,7 +167,7 @@ if ($result->num_rows > 0) {
         echo "<div class='card'>";
         echo "<img src='" . $row['imagen'] . "' alt='" . $row['nombre'] . "'>";
         echo "<p>" . $row['nombre'] . "<br>L." . number_format($row['precio'], 2) . "</p>";
-        echo "<a href='#' class='cart-icon'><i class='fa-solid fa-cart-plus'></i><span class='tooltip'>Agregar al carrito</span></a>";
+        echo "<a href='addcart.php?id=" . $row['id'] . "' class='cart-icon'><i class='fa-solid fa-cart-plus'></i><span class='tooltip'>Agregar al carrito</span></a>";
         echo "</div>";
     }
 } else {

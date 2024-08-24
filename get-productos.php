@@ -17,6 +17,9 @@ $sql = "SELECT nombre, precio, imagen FROM productos"; // Asegúrate de que "pro
 
 $result = $conn->query($sql);
 
+
+
+
 if ($result->num_rows > 0) {
     // Salida de datos para cada fila
     while ($row = $result->fetch_assoc()) {
