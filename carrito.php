@@ -194,5 +194,14 @@ $conn->close();
             <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </footer>
+
+    <script> 
+    if (localStorage.getItem('isAuthenticated') !== 'true') {
+    window.location.href = 'index.html';
+    }
+    function logout() {
+    localStorage.removeItem('isAuthenticated');
+    } 
+</script>
 </body>
 </html>
