@@ -156,18 +156,24 @@ nav.titulo {
 }
 
 
+
 .imagen-previa {
     position: relative;
     background-color: rgb(255, 255, 255);
-    max-width: 80%; 
+    max-width: 100%; 
     margin: 0;
-    margin-right:40px ; 
+    margin-right: 40px; 
 }
-.imagen-previa img {
-    width: 1000px; 
+
+/* Estilo para el canvas */
+#canvas {
+    width: 800px; 
+    height: 600px; 
+    background-color: #fff;
     display: block;
-    margin: auto; 
+    margin: auto;
 }
+
 
 /* categorias */
 .categorias {
@@ -239,6 +245,7 @@ nav.titulo {
 .modelos ul li:hover {
     background-color: #f878c7;
     color: white;
+    
 }
 
 
