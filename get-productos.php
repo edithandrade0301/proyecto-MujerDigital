@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost"; // o el nombre de tu servidor
+$servername = "localhost"; 
 $username = "root";
 $password = "";
 $dbname = "databasecats";
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para obtener productos
-$sql = "SELECT nombre, precio, imagen FROM productos"; // Asegúrate de que "productos" sea el nombre de tu tabla
+$sql = "SELECT nombre, precio, imagen FROM productos"; 
 
 $result = $conn->query($sql);
 

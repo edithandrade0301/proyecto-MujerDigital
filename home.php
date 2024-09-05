@@ -143,18 +143,7 @@
 <div class="container-card sec-1" id="guitarras">
     <div class="container-1">
 <?php
-$servername = "localhost"; 
-$username = "root";
-$password = "";
-$dbname = "databasecats";
-
-//conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+    include 'conexion.php';
 
 // Consulta SQL 
 $sql = "SELECT id, nombre, precio, imagen FROM productos"; 
